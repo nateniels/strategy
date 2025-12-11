@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS to create the "faded edges" effect */
+.mask-image-faded {
+    /* Chrome, Safari, Firefox, Opera */
+    mask-image: radial-gradient(white, white 80%, transparent 100%);
+    /* Old Webkit browsers */
+    -webkit-mask-image: radial-gradient(white, white 80%, transparent 100%);
+}
