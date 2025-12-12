@@ -81,7 +81,7 @@ const CourseStrategyTips = () => (
                     <h3 className="text-2xl font-bold text-gray-900 mb-3 border-b border-gray-500 pb-2">Approach</h3>
                     <ul className="list-disc list-inside space-y-1 text-gray-800 pl-4">
                         <li>Mental target picture</li>
-                        <li>Wedges - aim left cup</li>
+                        <li>Wedges - Aim left cup</li>
                     </ul>
                 </div>
 

@@ -144,8 +144,9 @@ const MentalStrategyAccordion = () => {
                                     <div className="space-y-4">
                                         {item.sections.map((section, index) => (
                                             <div key={index} className="flex space-x-3">
-                                                <CheckCircleIcon className="flex-shrink-0 h-6 w-6 text-green-600 mt-1" />
-                                                <div>
+<div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-sm mt-1">
+            {index + 1}
+        </div>                                                <div>
                                                     <h4 className="text-base font-bold text-gray-800">{section.title}</h4>
                                                     <p className="text-sm text-gray-600">{section.content}</p>
                                                 </div>

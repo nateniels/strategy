@@ -22,7 +22,7 @@ const formatRange = (val1, val2, unit = '') => {
     const num2 = parseFloat(val2 || 0);
     const min = Math.min(num1, num2).toFixed(0);
     const max = Math.max(num1, num2).toFixed(0);
-    return `${min} - ${max}${unit}`;
+    return `${min}-${max}${unit}`;
 };
 
 

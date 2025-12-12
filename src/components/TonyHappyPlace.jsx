@@ -5,22 +5,22 @@ import React from 'react';
 // 🛑 MENTAL CUES: Thin Borders and Black Text
 const mentalCues = [
     // Gold/Yellow Tones
-    { text: "Aggressive to Target", style: "bg-transparent border-yellow-500 text-gray-900" }, 
-    { text: "\"Confident and Commit\"", style: "bg-transparent border-amber-500 text-gray-900" }, 
+    { text: "Aggressive to Target", style: "bg-transparent border-yellow-600 text-gray-900" }, 
+    { text: "\"Confident and Commit\"", style: "bg-transparent border-yellow-600 text-gray-900" }, 
     
-    // Peach/Orange Tones
-    { text: "Same Routine, Every Shot", style: "bg-transparent border-orange-400 text-gray-900" }, 
-    { text: "Accelerate", style: "bg-transparent border-orange-500 text-gray-900" }, 
+    // FFC085 / FF9A7A (Peach/Orange Tones)
+    { text: "Same Routine, Every Shot", style: "bg-transparent border-yellow-600 text-gray-900" }, 
+    { text: "Accelerate", style: "bg-transparent border-yellow-600 text-gray-900" }, 
     
-    // Muted Yellow / Coral Red
-    { text: "Target Mental Picture", style: "bg-transparent border-yellow-300 text-gray-900" }, 
-    { text: "Be Athletic", style: "bg-transparent border-red-500 text-gray-900" }, 
+    // FFF296 / F06060 (Muted Yellow / Coral Red)
+    { text: "Target Mental Picture", style: "bg-transparent border-yellow-600 text-gray-900" }, 
+    { text: "Be Athletic", style: "bg-transparent border-yellow-600 text-gray-900" }, 
     
     // Remaining tones
     { text: "\"Flow and Feel\"", style: "bg-transparent border-yellow-600 text-gray-900" },
-    { text: "3 Holes x Time", style: "bg-transparent border-gray-400 text-gray-900" }, 
-    { text: "\"Be Great\"", style: "bg-transparent border-red-600 text-gray-900" },
-    { text: "Pay Your Caddie", style: "bg-transparent border-yellow-500 text-gray-900" }, 
+    { text: "3 holes x Time", style: "bg-transparent border-yellow-600 text-gray-900" }, 
+    { text: "\"Be Great\"", style: "bg-transparent border-yellow-600 text-gray-900" },
+    { text: "Pay Your Caddie", style: "bg-transparent border-yellow-600 text-gray-900" }, 
 
 ];
 

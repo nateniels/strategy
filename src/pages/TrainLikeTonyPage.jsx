@@ -73,7 +73,7 @@ function TrainLikeTonyPage() {
             {/* --- HEADER --- */}
             <header className="text-center mb-10 pb-4 border-b-2 border-gray-900">
                 <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-                    <span className="text-yellow-600">TRAIN</span> LIKE TONY
+                    TRAIN LIKE <span className="text-yellow-600">TONY</span>
                 </h1>
                 <p className="text-xl text-gray-600 mt-2">
                     A Peak Inside the Champion.
@@ -114,7 +114,7 @@ function TrainLikeTonyPage() {
             </div>
             
             {/* ---------------------------------------------------- */}
-            {/* --- MODALS (CONDITIONAL AND FIXED) ---               */}
+            {/* --- MODALS (CONDITIONAL AND FIXED) ---             */}
             {/* ---------------------------------------------------- */}
             
             {/* 🛑 MODAL 1: IMAGE LIGHTBOX */}
@@ -150,7 +150,7 @@ function TrainLikeTonyPage() {
                 </div>
             )}
             
-            {/* 🛑 MODAL 2: CONTACT MODAL */}
+            {/* 🛑 MODAL 2: CONTACT MODAL (UPDATED FOR SMS) */}
             {isContactModalOpen && (
                 <div 
                     onClick={closeContactModal} 
@@ -170,20 +170,22 @@ function TrainLikeTonyPage() {
                             <XMarkIcon className="h-6 w-6" />
                         </button>
 
-                        <PhoneIcon className="h-10 w-10 text-yellow-600 mx-auto mb-4"/>
+                        {/* 🛑 ICON COLOR CHANGED FOR TEXTING */}
+                        <PhoneIcon className="h-10 w-10 text-green-600 mx-auto mb-4"/> 
                         <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                            Contact Tony's Team
+                            Text Tony's Team
                         </h3>
 
                         <a 
-                            href={`tel:${PRE_FILLED_PHONE_NUMBER}`}
+                            /* 🛑 PROTOCOL SWITCH: tel: -> sms: AND ADDED PRE-FILLED BODY */
+                            href={`sms:${PRE_FILLED_PHONE_NUMBER}?body=Hi%20Tony%2C%20I'm%20interested%20in%20learning%20more%20about%20your%20training%20plan.`}
                             onClick={closeContactModal} 
                             className="inline-flex items-center justify-center w-full py-3 px-6 
                                 bg-green-600 text-white text-lg font-extrabold rounded-lg 
                                 shadow-lg transition duration-300 hover:bg-green-700"
                         >
                             <PhoneIcon className="h-5 w-5 mr-3"/>
-                            Call Now: {PRE_FILLED_PHONE_NUMBER}
+                            Text Now: {PRE_FILLED_PHONE_NUMBER}
                         </a>
                         
                     </div>
