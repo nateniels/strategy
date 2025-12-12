@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage";
 import HolesListPage from "./pages/HolesListPage";
 import HoleProfilePage from "./pages/HoleProfilePage";
 import TrainLikeTonyPage from "./pages/TrainLikeTonyPage.jsx";// 🛑 NEW IMPORT ADDED
+import ScrollToTop from './components/ScrollToTop'; // 🛑 NEW IMPORT
 
 function App() {
     const [allHolesData, setAllHolesData] = useState([]);
@@ -38,6 +39,7 @@ function App() {
 
     return (
         <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+          <ScrollToTop />
             <div className="min-h-screen bg-white text-gray-900">
                 <div className="container mx-auto p-4">
                     <Routes>
