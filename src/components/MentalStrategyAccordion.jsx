@@ -22,7 +22,7 @@ const accordionData = [
         subtitle: "Intention: Chase Pars.",
         sections: [
             { 
-                title: "Stat #1 Double Bogeys", 
+                title: "Double Bogeys", 
                 content: "The result of playing for birdies. Manage expectations and play for a par or bogey. When to be aggressive = risk of double bogey is zero."
             },
             { 
@@ -66,7 +66,7 @@ const accordionData = [
     // 🛑 ACCORDION ITEM 4: Putting Comparison
     {
         id: 4,
-        title: '"Be Ye Therefore Perfect"',
+        title: '"Putt Ye Therefore Perfect"',
         subtitle: "How Jesus Putts vs. How You Putt",
         sections: [],
         tableData: puttingStats 

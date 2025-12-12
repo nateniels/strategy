@@ -44,17 +44,21 @@ function HomePage({ allHolesData }) {
             {/* Removed the first <hr /> to reduce visual clutter after the strong header */}
             {/* <hr className="my-12 border-t-2 border-gray-200" /> */}
 
-            {/* --- 2. STATIC STRATEGIES --- */}
-            <CourseStrategyTips />
 
-            <hr className="my-12 border-t-2 border-gray-200" />
-
+            
             {/* --- 3. COURSE SELECTION LIST --- */}
             {/* This component handles routing to /course/:courseName */}
             <CourseSelectionList uniqueCourses={uniqueCourses} />
 
+
+            {/* --- 2. STATIC STRATEGIES --- */}
+            <CourseStrategyTips />
+
+        {/*---<hr className="my-12 border-t-2 border-gray-200" ---*/}
+
+
         {/* --- 4. NEW SECTION MOVED TO THE BOTTOM (Mental Strategy) --- */}
-        <hr className="my-12 border-t-2 border-gray-200" />
+        {/*---<hr className="my-12 border-t-2 border-gray-200" ---*/}
             <MentalStrategyAccordion />
             
         </div>
