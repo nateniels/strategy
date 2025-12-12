@@ -65,7 +65,7 @@ function HolesListPage({ allHolesData }) {
                             <h2 className="text-2xl font-bold text-gray-800">Hole {hole.HoleNumber}</h2>
                             <div className="text-right">
                                 <span className="block text-sm text-gray-500">Yardage: {hole.TotalYardage}</span>
-                                <span className="block text-lg font-semibold text-gray-900">Par {formatScore(hole.ExpectedScore)}</span>
+                                <span className="block text-lg font-semibold text-gray-900">xScore {formatScore(hole.ExpectedScore)}</span>
                             </div>
                         </div>
                     </div>

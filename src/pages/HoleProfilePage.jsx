@@ -114,7 +114,7 @@ function HoleProfilePage({ allHolesData }) {
                         </div>
 
                         <div className="flex flex-col">
-                            <span className="text-sm font-light text-gray-600">Expected Score</span>
+                            <span className="text-sm font-light text-gray-600">xScore</span>
                             <span 
                                 className="inline-block px-3 py-1 text-2xl font-bold rounded-full bg-green-100 text-green-700 shadow-md"
                             >
@@ -173,6 +173,7 @@ function HoleProfilePage({ allHolesData }) {
                         </div>
                     </div>
                 </div>
+                <TonyHappyPlace />
 
                 {/* COLUMN 2: IMAGE/MAP & TONY'S HAPPY PLACE (1/3 width) */}
                 <div className="lg:col-span-1">
@@ -191,7 +192,6 @@ function HoleProfilePage({ allHolesData }) {
                     </div>
                     
                     {/* 🛑 PLACEMENT: Tony's Happy Place component below the image/map */}
-                    <TonyHappyPlace />
                 </div>
             </div>
         </div>

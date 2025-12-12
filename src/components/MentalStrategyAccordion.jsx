@@ -10,9 +10,9 @@ const CUSTOM_LOGO_URL = 'https://decade.golf/wp-content/uploads/2023/03/Decade_L
 const puttingStats = [
     { distance: "0-5'", pros: 97, you: 93 },
     { distance: "6-12'", pros: 46, you: 43 },
-    { distance: "13-18'", pros: 19, you: 25 },
-    { distance: "19-24'", pros: 12, you: 15 },
-    { distance: "25-30'", pros: 5, you: 8 },
+    { distance: "13-18'", pros: 23, you: 19 },
+    { distance: "19-24'", pros: 14, you: 12 },
+    { distance: "25-30'", pros: 9, you: 7 },
 ];
 
 const accordionData = [
@@ -38,7 +38,7 @@ const accordionData = [
                 content: "Take the bogey rather than playing a hero shot. Hit the chip you can do in your sleep give yourself a 50/50 chance at par."
             },
             { 
-                title: "Bogeys with 9-iron or less", 
+                title: "Bogeys with 9-iron or Less", 
                 content: "Play your dispersion, not your perfect shot. Don't go flag-hunting unless it’s truly safe."
             },
         ]
