@@ -5,7 +5,7 @@ import React from 'react';
 // 🛑 MENTAL CUES: Thin Borders and Black Text
 const mentalCues = [
     // Gold/Yellow Tones
-    { text: "Hit aggressively to target", style: "bg-transparent border-yellow-500 text-gray-900" }, 
+    { text: "Aggressive to Target", style: "bg-transparent border-yellow-500 text-gray-900" }, 
     { text: "\"Confident and Commit\"", style: "bg-transparent border-amber-500 text-gray-900" }, 
     
     // Peach/Orange Tones
@@ -18,7 +18,7 @@ const mentalCues = [
     
     // Remaining tones
     { text: "\"Flow and Feel\"", style: "bg-transparent border-yellow-600 text-gray-900" },
-    { text: "3 holes x Time", style: "bg-transparent border-gray-400 text-gray-900" }, 
+    { text: "3 Holes x Time", style: "bg-transparent border-gray-400 text-gray-900" }, 
     { text: "\"Be Great\"", style: "bg-transparent border-red-600 text-gray-900" },
     { text: "Pay Your Caddie", style: "bg-transparent border-yellow-500 text-gray-900" }, 
 
