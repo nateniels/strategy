@@ -2,20 +2,13 @@
 
 const nextEvents = [
     {
-        dayName: "Friday",
-        date: 12, // The number
-        events: [
-            { time: "8:15am", description: "Bus to course" },
-            { time: "9:30am", description: "Practice Round (Course TBD)" },
-        ],
-    },
-    {
         dayName: "Saturday",
-        date: 13,
+        date: 13, // The number
         events: [
-            { time: "TBD", description: "Breakfast" },
-            { time: "TBD", description: "Bus to course" },
-            { time: "9:20am", description: "Round 1 Tee (Indian Wells)" },
+            { time: "7:15am", description: "Breakfast" },
+
+            { time: "7:45am", description: "Bus to course" },
+            { time: "9:20am", description: "Round 1 (Indian Wells)" },
         ],
     },
     {
@@ -24,7 +17,16 @@ const nextEvents = [
         events: [
             { time: "TBD", description: "Breakfast" },
             { time: "TBD", description: "Bus to course" },
-            { time: "TBD", description: "Round 2 Tee (Course TBD)" },
+            { time: "TBD", description: "Round 2 Tee (Nicklaus)" },
+        ],
+    },
+    {
+        dayName: "Monday",
+        date: 15,
+        events: [
+            { time: "TBD", description: "Breakfast" },
+            { time: "TBD", description: "Bus to course" },
+            { time: "TBD", description: "Round 3 Tee (Stadium)" },
         ],
     },
 ];
