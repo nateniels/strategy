@@ -15,9 +15,11 @@ const nextEvents = [
         dayName: "Sunday",
         date: 14,
         events: [
-            { time: "TBD", description: "Breakfast" },
-            { time: "TBD", description: "Bus to course" },
-            { time: "TBD", description: "Round 2 Tee (Nicklaus)" },
+            { time: "7:00am", description: "Breakfast" },
+            { time: "7:30am", description: "Bus to course" },
+            { time: "8:47am", description: "Round 2 Tee (Nicklaus)"},
+            { time: "3:30pm", description: "Roundtable Pizza" },
+
         ],
     },
     {

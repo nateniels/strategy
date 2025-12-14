@@ -4,8 +4,18 @@ import React, { useState } from 'react';
 import nextEvents from '../data/nextEvents'; 
 
 const NextThreeDates = () => {
-    // STATE CONTROLS WHICH EVENT IS DISPLAYED
-    const [currentEventIndex, setCurrentEventIndex] = useState(0); 
+    // ⛳️ AUTO-SELECT TODAY'S DATE LOGIC
+    const getInitialIndex = () => {
+        const todayNumber = new Date().getDate(); // Gets current day of month (e.g., 13)
+        // Find index where the event date matches today's date
+        const todayIndex = nextEvents.findIndex(event => event.date === todayNumber);
+        // If match found, use it; otherwise default to 0 (the first event)
+        return todayIndex !== -1 ? todayIndex : 0;
+    };
+
+    // Initialize state with the detected index
+    const [currentEventIndex, setCurrentEventIndex] = useState(getInitialIndex); 
+    
     const totalEvents = nextEvents.length;
     
     // Get the currently selected event data
@@ -13,7 +23,6 @@ const NextThreeDates = () => {
 
     // --- Schedule Block: Renders the time/description details ---
     const ScheduleBlock = ({ events }) => (
-        // Uses border-t as the single separator line we want inside the card
         <div className="space-y-2 pt-2 border-t border-gray-200">
             {events.map((event, index) => (
                 <div key={index} className="flex items-start"> 
@@ -54,29 +63,24 @@ const NextThreeDates = () => {
                                 <button
                                     key={index}
                                     onClick={() => setCurrentEventIndex(index)}
-                                    // Styling for the date circle (like Hole Selector)
                                     className={`flex-shrink-0 w-16 h-16 flex flex-col items-center justify-center text-sm font-bold rounded-full transition-colors duration-200 p-1
                                         ${
                                             isActive
-                                                ? 'bg-yellow-600 text-white shadow-md' // Highlighted yellow
+                                                ? 'bg-yellow-600 text-white shadow-md' 
                                                 : 'bg-white text-gray-800 hover:bg-gray-200 border border-gray-300'
                                         }`}
                                     aria-label={`Select ${event.dayName}, the ${event.date}th`}
                                 >
-                                    {/* Big Date Number */}
                                     <span className="text-xl leading-none">{event.date}</span>
-                                    {/* Day Name (Smaller) */}
                                     <span className="text-xs font-normal uppercase">{event.dayName.slice(0, 3)}</span> 
                                 </button>
                             );
                         })}
                     </div>
-                    {/* ------------------------------------------- */}
 
                     {/* 🛑 2. SCHEDULE BODY (The content that changes) 🛑 */}
                     <ScheduleBlock events={selectedEvent.events} />
                 </div>
-                {/* -------------------------------------------------- */}
                 
             </div>
         </div>
