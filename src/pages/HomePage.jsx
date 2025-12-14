@@ -6,10 +6,13 @@ import CourseStrategyTips from '../components/CourseStrategyTips';
 import CourseSelectionList from '../components/CourseSelectionList';
 import MentalStrategyAccordion from '../components/MentalStrategyAccordion';
 import NextThreeDates from '../components/NextThreeDates'; 
+import { useNavigate } from 'react-router-dom'; // 🛑 CHECK FOR THIS
+
 
 function HomePage({ allHolesData }) {
 
     const uniqueCourses = [...new Set(allHolesData.map(hole => hole.CourseName))];
+    const navigate = useNavigate(); // 🛑 CHECK FOR THIS
 
     return (
         <div className="p-6">
@@ -31,6 +34,17 @@ function HomePage({ allHolesData }) {
             <div className="mb-16"> 
                 <ImageCarousel />
             </div>
+
+            {/* ⛳️ FOLLOW MY ROUND BUTTON */}
+<div className="flex justify-center mb-10">
+    <button 
+        onClick={() => navigate('/live-round')}
+        // Changed to: bigger text (text-2xl), white bg, gold border, and gold hover effect
+        className="py-5 px-10 bg-white border-2 border-yellow-600 text-gray-900 text-2xl font-black uppercase rounded-full shadow-xl transition-all duration-300 hover:bg-yellow-600 hover:text-white transform hover:scale-105"
+    >
+        ⛳️ Follow My Round
+    </button>
+</div>
             
             {/* --- TONY'S NEXT 3 SECTION (Wrapped for Margin) --- */}
             <div className="mb-16">
