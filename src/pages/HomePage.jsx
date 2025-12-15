@@ -6,6 +6,7 @@ import CourseStrategyTips from '../components/CourseStrategyTips';
 import CourseSelectionList from '../components/CourseSelectionList';
 import MentalStrategyAccordion from '../components/MentalStrategyAccordion';
 import NextThreeDates from '../components/NextThreeDates'; 
+import InfoRequest from '../components/InfoRequest'; // 🛑 ADD THIS
 import { useNavigate } from 'react-router-dom'; // 🛑 CHECK FOR THIS
 
 
@@ -49,6 +50,11 @@ function HomePage({ allHolesData }) {
             {/* --- TONY'S NEXT 3 SECTION (Wrapped for Margin) --- */}
             <div className="mb-16">
                 <NextThreeDates />
+            </div>
+
+            {/* 🛑 NEW: TRAIN LIKE TONY SECTION 🛑 */}
+            <div className="mb-16">
+                <InfoRequest />
             </div>
             
             {/* --- 3. COURSE SELECTION LIST (Wrapped for Margin) --- */}
