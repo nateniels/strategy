@@ -1,17 +1,16 @@
 // File: src/components/InfoRequest.jsx
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; 
 import { ChatBubbleLeftRightIcon, XMarkIcon, PhoneIcon } from '@heroicons/react/24/solid';
 
 const InfoRequest = () => {
     const [showPop, setShowPop] = useState(false);
 
-    // 🛑 SET YOUR INFO HERE
     const PHONE_NUMBER = "801-232-5500"; 
     const SMS_MESSAGE = "Hi Tony, I'm interested in learning more about your training plan.";
 
     return (
         <div className="mb-12">
-            {/* HEADER MATCHING THE PAGE STYLE */}
             <div className="text-center mb-6 pb-2">
                 <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-none uppercase">
                     Train Like <span className="text-yellow-600">Tony?</span>
@@ -19,27 +18,35 @@ const InfoRequest = () => {
             </div>
 
             <div className="flex flex-col items-center px-4"> 
-                {/* CARD CONTAINER - Matches Tony's Next 3 Styling */}
+                {/* CARD CONTAINER */}
                 <div className="w-full max-w-sm mx-auto p-6 bg-white border border-gray-300 rounded-2xl shadow-lg space-y-4 text-center">
                     
                     <p className="text-base text-gray-600 leading-snug font-medium">
-                        Connect with Tony's Team to learn more about his training, mental approach, and performance habits.
+                        Connect with Tony's Team to learn about his training, mental approach, and performance systems.
                     </p>
 
+                    {/* STRATEGY BUTTON - Gold Outline / Black Text */}
+                    <Link 
+                        to="/train-like-tony" 
+                        className="block w-full py-4 bg-transparent border-2 border-yellow-600 text-gray-900 font-bold uppercase tracking-widest rounded-xl hover:bg-yellow-50 transition-all active:scale-95"
+                    >
+                        Tony's Development Strategy
+                    </Link>
+
+                    {/* REQUEST INFO BUTTON - Gold Outline / Black Text */}
                     <button 
                         onClick={() => setShowPop(true)}
-                        className="w-full py-4 bg-yellow-600 text-white font-black uppercase tracking-widest rounded-xl hover:bg-yellow-700 transition-all shadow-md active:scale-95"
+                        className="w-full py-4 bg-transparent border-2 border-yellow-600 text-gray-900 font-bold uppercase tracking-widest rounded-xl hover:bg-yellow-50 transition-all active:scale-95"
                     >
                         Request Info
                     </button>
                 </div>
             </div>
 
-            {/* 🛑 THE POPUP MODAL 🛑 */}
+            {/* POPUP MODAL */}
             {showPop && (
                 <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-black/80 backdrop-blur-sm">
                     <div className="bg-white rounded-3xl p-8 max-w-xs w-full shadow-2xl relative border border-gray-200">
-                        {/* Close Button */}
                         <button 
                             onClick={() => setShowPop(false)}
                             className="absolute top-4 right-4 text-gray-400 hover:text-gray-900"
@@ -56,7 +63,6 @@ const InfoRequest = () => {
                                 Text Tony's Team
                             </h3>
                             
-                            {/* 🛑 THE SMS BUTTON 🛑 */}
                             <a 
                                 href={`sms:${PHONE_NUMBER}?body=${encodeURIComponent(SMS_MESSAGE)}`}
                                 onClick={() => setShowPop(false)} 

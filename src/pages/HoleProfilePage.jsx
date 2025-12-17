@@ -100,10 +100,17 @@ function HoleProfilePage({ allHolesData }) {
                         {hole.ApproachDistance ? `${hole.ApproachDistance}yds` : "No approach distance strategy provided."}
                         </p>
                     </div>
-                    
+                    <div className="mb-6">
                     <h3 className="text-2xl font-extrabold text-gray-900 mb-4 border-b pb-2 mt-6">xApproach - Hole Proximity</h3>
+                    <p className="text-sm font-bold tracking-widest text-gray-500 mt-2">
+                    Expected Yds from Pin by Lie (Cost Compared to Fairway)
+                </p>
+                </div>
+                    
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div className="bg-white p-4 rounded-lg shadow-md text-center">
+
+                            
                             <h4 className="text-lg font-semibold text-gray-800 mb-1">Fairway</h4>
                             <p className="text-xl font-bold text-gray-900">{fairwayRange}</p>
                         </div>

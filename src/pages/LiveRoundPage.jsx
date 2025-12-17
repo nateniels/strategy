@@ -9,7 +9,7 @@ const LiveRoundPage = ({ liveScores = [], lastUpdated }) => {
     
     // 🛑 MASTER CONTROL SECTION 🛑
     const COURSE_ORDER = ["Indian Wells", "Nicklaus", "Stadium"];
-    const LIVE_COURSE_NAME = "Stadium"; 
+    const LIVE_COURSE_NAME = ""; 
 
     const toSlug = (str) => str ? String(str).toLowerCase().replace(/\s+/g, '') : '';
 
@@ -110,21 +110,34 @@ const LiveRoundPage = ({ liveScores = [], lastUpdated }) => {
                 </p>
             </header>
 
-            {/* SUMMARY CARDS */}
-            <div className="grid grid-cols-3 gap-2 mb-10 px-2 max-w-lg mx-auto">
-                <div className="bg-white p-3 rounded-2xl shadow-lg border-2 border-gray-300 text-center">
-                    <p className="text-[9px] text-gray-500 font-bold uppercase mb-1">Total Strokes</p>
-                    <p className="text-2xl font-black text-gray-900">{totalStrokes}</p>
-                </div>
-                <div className="bg-white p-3 rounded-2xl shadow-lg border-2 border-yellow-600 text-center">
-                    <p className="text-[9px] text-yellow-600 font-bold uppercase mb-1">Strokes Gained</p>
-                    <p className={`text-2xl font-black ${sgRaw > 0 ? "text-green-600" : "text-gray-900"}`}>{formatStrokesGained(sgRaw)}</p>
-                </div>
-                <div className="bg-white p-3 rounded-2xl shadow-lg border-2 border-green-600 text-center">
-                    <p className="text-[9px] text-green-600 font-bold uppercase mb-1">Process Pts</p>
-                    <p className="text-2xl font-black text-green-600">{totalProcess}</p>
-                </div>
-            </div>
+  {/* SUMMARY CARDS */}
+<div className="grid grid-cols-3 gap-2 mb-10 px-2 max-w-lg mx-auto">
+    {/* Total Strokes Box */}
+    <div className="bg-white p-3 rounded-2xl shadow-lg border-2 border-gray-300 flex flex-col items-center justify-between">
+        <p className="text-[9px] text-gray-500 font-bold uppercase w-full h-7 flex items-center justify-center leading-tight">
+            Total Strokes
+        </p>
+        <p className="text-2xl font-black text-gray-900 mt-1">{totalStrokes}</p>
+    </div>
+
+    {/* Strokes Gained Box */}
+    <div className="bg-white p-3 rounded-2xl shadow-lg border-2 border-yellow-600 flex flex-col items-center justify-between text-center">
+        <p className="text-[9px] text-yellow-600 font-bold uppercase w-full h-7 flex items-center justify-center leading-tight">
+            Strokes Gained
+        </p>
+        <p className={`text-2xl font-black mt-1 ${sgRaw > 0 ? "text-green-600" : "text-gray-900"}`}>
+            {formatStrokesGained(sgRaw)}
+        </p>
+    </div>
+
+    {/* Process Pts Box */}
+    <div className="bg-white p-3 rounded-2xl shadow-lg border-2 border-green-600 flex flex-col items-center justify-between text-center">
+        <p className="text-[9px] text-green-600 font-bold uppercase w-full h-7 flex items-center justify-center leading-tight">
+            Process Pts
+        </p>
+        <p className="text-2xl font-black text-green-600 mt-1">{totalProcess}</p>
+    </div>
+</div>
 
             {/* TABLE */}
             <div className="overflow-x-auto overflow-y-auto max-h-[550px] rounded-2xl border border-gray-300 shadow-xl bg-white mb-8 custom-scrollbar">

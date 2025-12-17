@@ -37,7 +37,7 @@ const carouselItems = [
         type: 'image',
         src: 'https://i.imgur.com/zp1PtIM.png',
         alt: 'Golf Course Overview Banner',
-        link: 'https://www.pgawest.com/golf', 
+        link: 'https://sites.google.com/pgahq.com/25pganationalclubchampionship/mens', 
     },
     {
         type: 'image',
@@ -45,12 +45,12 @@ const carouselItems = [
         alt: 'South Hills Dental Specialists Banner',
         link: 'https://www.southhillsdentalspecialists.com/orthodontics/new-patients/',
     },
-    {
-        type: 'card',
-        alt: 'Train Like Tony Performance Card',
-        link: '/train-like-tony', 
-        cardImage: TONY_IMAGE_URL,
-    },
+  //  {
+   //     type: 'card',
+  //      alt: 'Train Like Tony Performance Card',
+   //     link: '/train-like-tony', 
+   //     cardImage: TONY_IMAGE_URL,
+  //  },
 ];
 
 const ImageCarousel = () => {

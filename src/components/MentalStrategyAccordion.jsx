@@ -97,7 +97,7 @@ const MentalStrategyAccordion = () => {
                 You Will Hit Bad Shots
             </h1>
             <p className="text-xl text-gray-600 mb-8 font-semibold tracking-wide">
-                Training helps and reminders.
+                Creating Expectations and Getting to Zero.
             </p>
 
             <div className="space-y-4">

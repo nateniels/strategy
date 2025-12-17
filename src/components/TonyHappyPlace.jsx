@@ -30,11 +30,12 @@ const TonyHappyPlace = () => (
         <h2 className="text-3xl font-extrabold text-gray-900 mb-4 border-b-2 border-gray-400 pb-2">
             Tony's Happy Place
         </h2>
+        <p className="text-sm font-bold uppercase tracking-widest text-gray-500 mt-2">
+                    Mental Process Reminders
+                </p>
         
         <div className="mt-4">
-            <h3 className="text-xl font-bold text-gray-700 mb-3">
-                Swing Thoughts
-            </h3>
+
             
             {/* GRID CONTAINER FOR THE SQUARES */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">

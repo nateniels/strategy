@@ -31,8 +31,8 @@ function HomePage({ allHolesData }) {
             </header>
             {/* --------------------------------------------- */}
             
-            {/* --- 1. CAROUSEL BANNER (Increased Margin) --- */}
-            <div className="mb-16"> 
+                {/* --- 1. CAROUSEL BANNER (Increased Margin) --- */}
+                <div className="mb-16"> 
                 <ImageCarousel />
             </div>
 
@@ -46,7 +46,12 @@ function HomePage({ allHolesData }) {
         ⛳️ Follow My Round
     </button>
 </div>
-            
+
+                   {/* --- 3. COURSE SELECTION LIST (Wrapped for Margin) --- */}
+                   <div className="mb-16">
+                <CourseSelectionList uniqueCourses={uniqueCourses} />
+            </div>
+
             {/* --- TONY'S NEXT 3 SECTION (Wrapped for Margin) --- */}
             <div className="mb-16">
                 <NextThreeDates />
@@ -57,10 +62,7 @@ function HomePage({ allHolesData }) {
                 <InfoRequest />
             </div>
             
-            {/* --- 3. COURSE SELECTION LIST (Wrapped for Margin) --- */}
-            <div className="mb-16">
-                <CourseSelectionList uniqueCourses={uniqueCourses} />
-            </div>
+   
 
             {/* --- 2. STATIC STRATEGIES (Wrapped for Margin) --- */}
             <div className="mb-16">
@@ -71,7 +73,12 @@ function HomePage({ allHolesData }) {
             <MentalStrategyAccordion />
             
         </div>
+
+
+
     );
+
+
 }
 
 export default HomePage;
